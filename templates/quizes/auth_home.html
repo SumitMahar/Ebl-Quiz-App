@@ -1,0 +1,31 @@
+<!-- Available quizes for authenticated user -->
+<div class="container">
+    <div class="row text-center gy-4 mt-3">
+        <h4 class="">Quizes Available For Practice</h4>
+
+        {% for quiz in quiz_list %}
+        <div class="col-md-4 ">
+            <div class="card bg-white text-dark shadow h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">
+                        {{ quiz.name }}
+                    </h3>
+                    <p class="card-text text-muted m-0">Topic: {{ quiz.topic }}</p>
+                    <p class="card-text text-muted m-0">Difficulty: {{ quiz.difficulty }}</p>
+
+                    <p class="mt-0"><span class="{{ h }} fw-bold">Duration: {{ quiz.duration }}</span>
+                    </p>
+                    <!-- Button trigger modal for listing quizes -->
+                    <button type="button" class="btn btn-info btn-md shadow quiz-modal-button" data-bs-toggle="modal"
+                        data-bs-target="#quiz_modal" data-pk="{{ quiz.pk }}" data-quiz-name="{{ quiz.name }}"
+                        data-questions="{{ quiz.no_of_questions }}" data-difficulty="{{ quiz.difficulty }}"
+                        data-duration="{{ quiz.duration }}" data-pass="{{ quiz.req_score_to_pass }}"
+                        data-quiz-url="{% url 'quizes:quiz_view' quiz.pk %}">
+                        Start Quiz
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

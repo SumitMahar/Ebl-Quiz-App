@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Team section -->
+<div class="containerr">
+    <section id="instructors" class="p-5 bg-dark">
+        <div class="container">
+            <div class="align-items-center justify-content-between text-center">
+                <div>
+                    <img src="{% static 'img/mk_clothing.svg' %}" class="img-fluid" alt="">
+                </div>
+            </div>
+            <h2 class="text-center text-white">
+                Our Team
+            </h2>
+            <p class="lead text-center text-white mb-5">
+                Our founders, team members, and board members are innovators.
+                <br>
+                We are committed to creating more good in
+                the world and some more blah blah blah!
+            </p>
+            <div class="row g-4">
+                <!-- first -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light shadow  h-100">
+                        <div class="card-body text-center">
+                            <img src="{% static 'img/mohit.jpg' %}" class="rounded-circle w-50 mb-3" alt="">
+                            <h3 class="card-title mb-0">Mohit Gupta</h3>
+                            <span class="text-muted">(Founder)</span>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad odio minus maiores laborum
+                                voluptates odit!
+                            </p>
+                            <a href=""><i class="fab fa-twitter text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-facebook text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-linkedin text-dark mx-1"></i></a>
+                            <a href="https://www.instagram.com/mohit_gupta097/" target="_blank"><i
+                                    class="fab fa-instagram text-dark mx-1"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- second -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light shadow">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/women/13.jpg" class="rounded-circle mb-3"
+                                alt="">
+                            <h3 class="card-title mb-0">Sonam Gupta
+                            </h3>
+                            <span class="text-bold mt-0 text-muted ">(Designer )</span>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad odio minus maiores
+                                laborum
+                                voluptates odit!
+                            </p>
+                            <a href=""><i class="fab fa-twitter text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-facebook text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-linkedin text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-instagram text-dark mx-1"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- third -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light shadow">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle mb-3"
+                                alt="">
+                            <h3 class="card-title mb-0">Ranveer j</h3>
+                            <span class="text-muted">(Finance Head)</span>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad odio minus maiores laborum
+                                voluptates odit!
+                            </p>
+                            <a href=""><i class="fab fa-twitter text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-facebook text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-linkedin text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-instagram text-dark mx-1"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- fourth -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light shadow">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/women/50.jpg" class="rounded-circle mb-3"
+                                alt="">
+                            <h3 class="card-title mb-0">Sara Kaur</h3>
+                            <span class="text-muted">(Marketing Head)</span>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad odio minus maiores laborum
+                                voluptates odit!
+                            </p>
+                            <a href=""><i class="fab fa-twitter text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-facebook text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-linkedin text-dark mx-1"></i></a>
+                            <a href=""><i class="fab fa-instagram text-dark mx-1"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="container my-5 p-5">
+    <div class="p-4 shadow align-items-center justify-content-between">
+        <div class="card-body text-center">
+            <img src="{% static 'img/mk_clothing.svg' %}" class="img-fluid" alt="">
+            <h3 class="card-title mt-2">
+                About us
+            </h3>
+            <p class="cart-text">
+                We’re a small team with a common dream – to make great quality products really affordable and
+                <br>
+                available to every person. <a class="" href="{% url 'mk_clothing:contact' %}">Contact</a>
+                us to
+                learn more.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

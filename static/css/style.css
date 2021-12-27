@@ -1,0 +1,33 @@
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+.shopping2 {
+    max-height: 420px;
+}
+
+.not-visible {
+    display: none;
+}
+
+.bg-pic {
+    background-image: url('../img/banner-img.jpg');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    min-height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+.ebl-colour {
+    color: rgb(242, 116, 6);
+}
+
+@media(min-width: 768px) {
+    .email-input {
+        width: 50%;
+    }
+}

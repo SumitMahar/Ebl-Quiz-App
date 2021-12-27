@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block content %}
+<!-- contact -->
+<section class="p-5">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-md">
+                <h2 class="text-center mb-4">
+                    Contact Info
+                </h2>
+                <ul class="list-group list-group-flush lead">
+                    <li class="list-group-item">
+                        <span class="fw-bold">
+                            <i class="fa fa-address-card" aria-hidden="true"></i> Main Location :
+                        </span>E-87, Sector 63 Gautam Budh Nagar, Noida 201301
+                    </li>
+                    <li class="list-group-item">
+                        <span class="fw-bold">
+                            <i class="fa fa-phone-square" aria-hidden="true"></i> Contact:
+                        </span>
+                        (9871976959)
+                    </li>
+                    <li class="list-group-item">
+                        <span class="fw-bold">
+                            <i class="fa fa-envelope-open" aria-hidden="true"></i> Email </i> :
+                        </span>Dhananjayg723@gmail.com
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md">
+                <img src="{% static 'img/mk_clothing.svg'  %}" class="img-fluid" alt="">
+
+            </div>
+        </div>
+    </div>
+</section>
+<div class="my-5"></div>
+{% endblock content %}

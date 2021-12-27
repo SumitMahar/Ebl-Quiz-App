@@ -1,0 +1,78 @@
+<!-- Navbar -->
+{% load static %}
+<nav class="navbar navbar-expand-md navbar-light bg-white fixed-top shadow-sm ">
+    <div class="container">
+        <a class="navbar-brand" style="font-family: 'Libre Baskerville', serif; font-size: x-large;" href="/"><img
+                src="{% static 'img/ebl_logo.png' %}" alt="" width="60" height="36"
+                class="d-inline-block align-text-top">Ebl Quiz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{% url 'quizes:quiz_home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'quizes:quiz_home' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'quizes:quiz_home' %}">Contact</a>
+                </li>
+
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Quiz
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-item"
+                                href="{% url 'quizes:quiz_home' %}">View Result
+                            </a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="{% url 'quizes:quiz_home' %}#dashboard">View Solutions
+                            </a></li>
+                        <div class="dropdown-divider"></div>
+                        <li><a class="dropdown-item" href="{% url 'quizes:quiz_home' %}">Download Report
+                            </a></li>
+                    </ul>
+                </li>
+                {% endif %}
+
+            </ul>
+
+            {% if user.is_authenticated %}
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-user"
+                            aria-hidden="true"></i>
+                        {{ user.username }} </a>
+                    <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown"> <a
+                            class="dropdown-item" href="{% url 'password_change'%}">Change password</a>
+
+                        <div class="dropdown-divider"></div> <a class="dropdown-item" href="{% url 'logout' %}">Log
+                            Out</a>
+                        <div class="dropdown-divider"></div> <a class="dropdown-item"
+                            href="{% url 'password_reset' %}">Reset
+                            Password</a>
+
+                    </div>
+                </li>
+            </ul>
+            {% else %}
+            <form class="form-inline ml-auto">
+
+                <a href="{% url 'login' %}" class="btn btn-outline-info"> Log In</a>
+                <a href="{% url 'accounts:signup' %}" class="btn btn-secondary text-white ml-2">
+                    Sign up</a>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+
+</nav>
+<!-- Navbar ends -->
