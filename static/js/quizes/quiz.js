@@ -50,7 +50,7 @@ $.ajax({
     type: 'GET',
     url: `${url}data`,
     success: function (response) {
-        console.log(response)
+        // console.log(response)
         let data = response.data
         let q_no = 1
         let questionAndAnswers = ''
@@ -116,6 +116,8 @@ const sendData = () => {
         success: function (response) {
             // console.log(response)
             quizForm.classList.add('not-visible')
+            timerBox.classList.add('not-visible')
+
 
             scoreBox.innerHTML = `${response.passed ? 'Well done you passed!' : 'better luck next time'} Your score is ${response.score}%`
 
