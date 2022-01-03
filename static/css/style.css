@@ -22,15 +22,15 @@ body::before {
 
 }
 
-/* .bg-banner { */
-    /* background-image: url('../img/about_banner.png'); */
-    /* background-color: #cccccc; Used if the image is unavailable */
-    /* min-height: 250px; */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; Resize the background image to cover the entire container */
+.bg-banner {
+    background-image: url('../img/about_banner.png');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    min-height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Resize the background image to cover the entire container */
 
-/* } */
+ }
 
 .bg-banner h1 {
     font-size: 4rem;
