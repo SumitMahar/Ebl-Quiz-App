@@ -15,7 +15,7 @@ class QuizListView(ListView):
     
 
 def about_view(request):
-    return render(request, 'quizes/about.html', {})
+    return render(request, 'quizes/about.html')
 
 def quiz_view(request, pk):
     quiz = Quiz.objects.get(pk=pk)
