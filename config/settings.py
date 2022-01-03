@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 from environs import Env
+import os
 
 env = Env()
 env.read_env()
@@ -148,3 +149,4 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Crispy forms settings
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
