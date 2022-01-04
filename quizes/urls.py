@@ -11,7 +11,8 @@ from .views import (
 app_name = 'quizes'
 
 urlpatterns = [
-    path('abt/', about_view, name='about'),
+    path('abt/', about_view, name='about_view'),
+    path('quiz/about/', about_view, name='about'),
     path('', QuizListView.as_view(), name='quiz_home' ),
     path('quiz/<pk>/', quiz_view, name='quiz_view' ),
     path('quiz/<pk>/data/', quiz_data_view, name='quiz_data_view'),
