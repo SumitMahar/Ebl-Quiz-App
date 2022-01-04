@@ -15,7 +15,7 @@ class QuizListView(ListView):
     
 
 class AboutView(TemplateView):
-    template_name = 'quizes/about_page.html'
+    template_name = 'quizes/about.html'
 
 
 
