@@ -14,7 +14,7 @@ class QuizListView(ListView):
     context_object_name = 'quiz_list'
     
 
-def about_view(request):
+def about_view(request, *args, **kwargs):
     return render(request, 'quizes/about_page.html')
 
 def quiz_view(request, pk):
