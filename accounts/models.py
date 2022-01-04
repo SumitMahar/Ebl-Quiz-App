@@ -11,5 +11,6 @@ class CustomUser(AbstractUser):
     ]
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
+    date_of_joining = models.DateField()
 
     
