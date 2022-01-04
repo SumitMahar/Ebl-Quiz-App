@@ -1,6 +1,6 @@
 from typing import List
 from django.shortcuts import render
-from django.views.generic import ListView 
+from django.views.generic import ListView, TemplateView
 from django.http import JsonResponse
 
 from .models import Quiz
@@ -14,8 +14,10 @@ class QuizListView(ListView):
     context_object_name = 'quiz_list'
     
 
-def about_view(request, *args, **kwargs):
-    return render(request, 'quizes/about_page.html')
+class AboutView(TemplateView):
+    template_name = 'quizes/about_page.html'
+
+
 
 def quiz_view(request, pk):
     quiz = Quiz.objects.get(pk=pk)
